@@ -1,4 +1,3 @@
-# The Padawan path
 
 ## Herramientas de desarrollo
 * Herramientas generales
@@ -47,7 +46,7 @@
   * GitHub y Gitlab
   * Flujos de trabajo
 
-# Web 101: HTTP, HTML y CSS
+## Web 101: HTTP, HTML y CSS
 * HTTP
   * Historia
   * Especificacion del protocolo [RFC2616](https://datatracker.ietf.org/doc/html/rfc2616/)
@@ -126,7 +125,7 @@
   * Mejores prácticas de HTML
   * Mejores prácticas de CSS
 
-# Ruby
+## Ruby
 * Introducción
   * Filosofía
   * Instalación
@@ -181,7 +180,7 @@
   * Buenas practicas
   * Patrones de diseño
 
-# Ruby On Rails
+## Ruby On Rails
 * Introducción
   * Filosofia
   * Instalación
