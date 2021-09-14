@@ -15,7 +15,7 @@ Los conocimientos mínimos requeridos en desarrollo
 - Lenguaje de programación (Ruby, JS, Python, Elixir, etc)
 - Webframework
 
-## Teorico
+## Teoria
 Fundamentos teóricos sobre el desarrollo de software
 - Filosofia y buenas practicas
 - Diseño de software
