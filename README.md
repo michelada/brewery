@@ -1,6 +1,6 @@
-# Jedi Academy
+# Brewery
 
-Padawan trainiee program references
+Brewery program references
 
 ## Credits
 
