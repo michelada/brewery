@@ -1,4 +1,4 @@
-## Infraestructura
+## DevOps Stack
 - Redes y Seguridad
 - Sistemas operativos
 - Virtualizacion
