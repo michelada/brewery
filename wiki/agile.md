@@ -17,7 +17,7 @@ Extreme Programming (XP) es una metodologia de desarrollo de software ágil que 
 Algunas prácticas de XP son:
   * Pair programming
   * Planning game
-  * [Test driven development](https://github.com/iOSLabUNAM/diplomado/wiki/TDD)
+  * Test driven development
   * Whole team:
      - "Within XP, the **customer** is not the one who pays the bill, but the one who really uses the system.""
   * Continuous integration
@@ -32,7 +32,7 @@ Algunas prácticas de XP son:
 
 ![scrum-cycle](https://cdn.evbuc.com/eventlogos/45795285/scrumframework2000x1000.png)
 
-Scrum es una metodologia Ágil para completar proyectos complejos. Scrum originalmente se formalizó para proyectos de desarrollo de software, pero funciona bien para cualquier ámbito de trabajo complejo e innovador. Las posibilidades son infinitas. El marco de Scrum es engañosamente simple. [fuente](https://www.scrumalliance.org/why-scrum)
+Scrum es una metodología Ágil para completar proyectos complejos. Scrum originalmente se formalizó para proyectos de desarrollo de software, pero funciona bien para cualquier ámbito de trabajo complejo e innovador. Las posibilidades son infinitas. El marco de Scrum es engañosamente simple. [fuente](https://www.scrumalliance.org/why-scrum)
 
 Algunos conceptos a considerar al realizar scrum son:
   * Product Owner
