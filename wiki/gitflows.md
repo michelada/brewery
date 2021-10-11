@@ -1,8 +1,4 @@
----
-title: Flujos de trabajo con git
-category: design patterns
-layout: post
----
+# Flujos de trabajo con git
 
 ![hero](https://wac-cdn.atlassian.com/dam/jcr:25d06843-2468-4e00-8ae7-11d4164f8995/hero.svg?cdnVersion=hp)
 La diversidad de metodologias a implementar en los flujos de trabajo pueden difícultar la implementacion GIT en un proyecto colaborativo.
