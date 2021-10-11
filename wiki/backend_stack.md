@@ -22,7 +22,6 @@ Fundamentos teóricos sobre el desarrollo de software
 - SOLID
 - Patrones de diseño
 - TDD
-- Arqueologia de software
 
 ## Componentes de aplicación
 Los conocimientos diversos utilizados a implementar aplicaciones

@@ -44,7 +44,7 @@ Algo importante que resalta en scrum es que durante el sprint no se aceptan nuev
 
 ## Kaban
 
-![kanban-board](https://d2t79q9g75enw7.cloudfront.net/wp-content/uploads/2016/10/kanban-board.png)
+![kanban-board](assets/kanban.png)
 
 A diferencia de scrum donde existe una planeacion periodica, kanban se enfoca en el trabajo diario. Pareceria que al no existir una planeacion formal el desarrollo se conviernte un caos, sin embargo esto permite una mayor adaptacion al cambio. Mientras que en scrum los sprints estan definidos por periodos fijos, kaban permite extender el trabajo a mas de un sprint, considerando que la unidad minima de trabajo es 1 dia.
 
