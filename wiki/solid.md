@@ -1,5 +1,7 @@
 # SOLID
 
+En ingeniería de software, SOLID es un acrónimo mnemónico de cinco principios de diseño destinados a hacer que los diseños de software sean más comprensibles, flexibles y fáciles de mantener. Los principios son un subconjunto de muchos principios promovidos por Robert C. Martin (unclebob), introducidos por primera vez en su artículo de 2000 Design Principles and Design Patterns.
+
 ## Single Responsibility
 
 Establece que cada módulo debe tener una responsabilidad única, lo cual significa que tiene que ser altamente cohesivo e implementar una lógica fuertemente relacionada.
