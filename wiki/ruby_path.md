@@ -6,6 +6,7 @@
   * Otras implementaciones de Ruby
   * Consola interactiva
   * Ruby en 20 minutos
+
 ## Programación Orientada a Objetos
   * Paradigmas de programación
     * Tabla comparativa de caracteristicas
@@ -14,6 +15,7 @@
   * Maquinas virtuales
   * El paradigma de objetos
   * Fundamentos de objetos
+
 ## Estructura del lenguaje
   * Palabras reservadas
   * Literales
@@ -29,6 +31,7 @@
   * Misceláneos de sintáxis
   * Estructura de archivos
   * Globals
+
 ## Biblioteca estándar
   * Debugging
   * Strings
@@ -80,6 +83,8 @@
   * jbuilder + oj
   * Dali
   * jwt
+  * jekyll
+
 
 
 ## Bibliografia

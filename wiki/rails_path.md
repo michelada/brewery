@@ -4,7 +4,8 @@
   * Filosofia
   * Instalación
   * Arquitectura de aplicaciones Rails
-## Rails basico desde cero
+
+## Rails desde cero
   * Descripción y requerimientos
   * Creación de la aplicación
   * Validaciones y pruebas unitarias
@@ -18,6 +19,7 @@
   * Inicio de sesión
   * I18n
   * Recibir y responder correos
+
 ## Rails a detalle
   * Organización interna
   * ActiveRecord
@@ -28,7 +30,6 @@
   * Extenciones de Rails
 
 ## Implementaciones con Rails
-
   * Analytics
   * APIs
   * Assets
