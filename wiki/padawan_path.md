@@ -126,85 +126,10 @@
   * Mejores prácticas de HTML
   * Mejores prácticas de CSS
 
-## Ruby
-* Introducción
-  * Filosofía
-  * Instalación
-  * Otras implementaciones de Ruby
-  * Consola interactiva
-  * Ruby en 20 minutos
-* Programación Orientada a Objetos
-  * Paradigmas de programación
-  * Tipos de tipado
-  * El paradigma de objetos
-  * El tipado dinamico
-  * Fundamentos
-* Estructura del lenguaje
-  * Palabras reservadas
-  * Literales
-  * Comentarios
-  * Variables y constantes
-  * Asignación
-  * Estructuras de control
-  * Pattern matching
-  * Métodos
-  * Módulos y clases
-  * Excepciones
-  * Chango parches y Refinements
-  * Precedencia
-  * Misceláneos de sintáxis
-  * Estructura de archivos
-  * Globals
-* Clases en el núcleo del lenguaje
-  * Núcleo del lenguaje
-  * Tipos de valor
-  * Excepciones
-  * Warning
-  * Programación de sistemas y CLI
-  * Concurrencia y paralelísmo
-  * Detalles del intérprete
-* Biblioteca estándar
-  * Patrones de diseño
-  * Formatos
-  * Desarrollo y debugging
-  * Utilidades para cadenas
-  * Redes y web
-  * Criptografía y codificación
-  * Bibliotecas varias
-* Desarrollo con Ruby
-  * Bibliotecas y gemas
-  * IRB
-  * Documentacion
-  * Pruebas
-  * Estilos de código
-* The ruby way
-  * Buenas practicas
-  * Patrones de diseño
+## Ruby Path
 
-## Ruby On Rails
-* Introducción
-  * Filosofia
-  * Instalación
-  * Arquitectura de aplicaciones Rails
-* Una aplicación desde cero
-  * Descripción y requerimientos
-  * Creación de la aplicación
-  * Validaciones y pruebas unitarias
-  * Dibujado de catálogo
-  * Carrito de compras
-  * Un carrito más inteligente
-  * Dinamísmo con Ajax
-  * Check out
-  * Pagos
-  * Background jobs e Emails
-  * Inicio de sesión
-  * I18n
-  * Recibir y responder correos
-* Rails a detalle
-  * Organización interna
-  * ActiveRecord
-  * ActionDispatch y ActionController
-  * ActionView
-  * ActiveJob
-  * Migraciones
-  * Extenciones de Rails
+[detalles]({{ site.github.repository_url }}/ruby_path)
+
+## Ruby On Rails Path
+
+[detalles]({{ site.github.repository_url }}/rails_path)
