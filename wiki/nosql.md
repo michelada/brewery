@@ -13,6 +13,13 @@ Existen cuatro tipos de NoSQL:
 * **Wide Column**: Los elementos de datos se estructuran en columnas, en donde el tipo de dato puede variar. Algunos lo interpretan como un *Key-Value bidimensional*.
 * **Graph**: La teoría de *grafos* aplicada al almacenamiento de datos. Estructura la información por medio de nodos(nodes) y bordes(edges)
 
+## Casos de uso
+
+* **Key-Value**: cache, busquedas simples, datos transaccionales y de acceso rápido
+* **Document**: propósito general y estructuras de datos dinámicas
+* **Wide Column**: big data
+* **Graph**: análisis de datos y data science
+
 ## Prinicipales Implementaciones
  * [Redis](https://redis.io) (key-value)
  * [MongoDB](https://www.mongodb.com) (document)
@@ -35,6 +42,7 @@ Existen cuatro tipos de NoSQL:
 
 ## Bibliografia
 
+* [https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf)
 * [https://en.wikipedia.org/wiki/NoSQL](https://en.wikipedia.org/wiki/NoSQL)
 * [https://en.wikipedia.org/wiki/Strozzi_NoSQL](https://en.wikipedia.org/wiki/Strozzi_NoSQL)
 * [https://en.wikipedia.org/wiki/Key–value_database](https://en.wikipedia.org/wiki/Key–value_database)
