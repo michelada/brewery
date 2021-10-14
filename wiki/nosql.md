@@ -28,13 +28,6 @@ Existen cuatro tipos de NoSQL:
  * [BigTable](https://cloud.google.com/bigtable/) (wide-column)
  * [Neo4j](https://neo4j.com) (graph)
 
-## Casos de uso
-
-* **Key-Value**: cache, busquedas simples, datos transaccionales y de acceso rápido
-* **Document**: propósito general y estructuras de datos dinámicas
-* **Wide Column**: big data
-* **Graph**: análisis de datos y data science
-
 ## Alternativas
 * [JSON(PostgresSQL)](https://www.postgresql.org/docs/current/datatype-json.html): Una alternativa a MongoDB es dentro PostgresSQL utilizando columnas de tipo JSON y JSONB. Las cuales habilitan la flexibilidad de datos que tienen las NoSQL basadas en documentos.
 * [ETS(Erlang)](https://beta.erlang.org/docs/19/man/ets.html): Alternativa a key-value dentro del ecosistema de Erlang/Elixir
