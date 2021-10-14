@@ -1,7 +1,7 @@
 # Tech Stack
 
-- [Backend]({{ site.github.repository_url }}/backend_stack)
+- [Backend]({{ site.baseurl }}/backend_stack)
 - [Frontend]({{ site.github.repository_url }}/new/main?path=wiki)
-- [DevOps]({{ site.github.repository_url }}/devops_stack)
+- [DevOps]({{ site.baseurl }}/devops_stack)
 - [QA]({{ site.github.repository_url }}/new/main?path=wiki)
 - [UI/UX]({{ site.github.repository_url }}/new/main?path=wiki)
