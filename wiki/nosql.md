@@ -13,19 +13,6 @@ Existen cuatro tipos de NoSQL:
 * **Wide Column**: Los elementos de datos se estructuran en columnas, en donde el tipo de dato puede variar. Algunos lo interpretan como un *Key-Value bidimensional*.
 * **Graph**: La teoría de *grafos* aplicada al almacenamiento de datos. Estructura la información por medio de nodos(nodes) y bordes(edges)
 
-## Tabla Comparativa
-|-|---|-----|
-| |SQL|NoSQL|
-|-|---|-----|
-|Modelo|tablas con filas y columnas fijas|Documento: documentos JSON, key-value: pares llave-valor, wide-column: tablas con filas y columnas dinámicas, graph: nodos y bordes|
-|Historia|Desarrollado en los 1970's con un enfoque en reducir la duplicación de datos|Desarrollado a finales de la década de 2000 con un enfoque en escalar y permitir un cambio rápido de aplicaciones impulsado por prácticas ágiles y DevOps.|
-|Implementaciones|Oracle, MySQL, Microsoft SQL Server, and PostgreSQL|Document: MongoDB and CouchDB, Key-value: Redis and DynamoDB, Wide-column: Cassandra and HBase, Graph: Neo4j and Amazon Neptune|
-|Propósito primario|Propósito general|Document: propósito general, key-value: grandes cantidades de datos con consultas de búsqueda simples, Wide-column: grandes cantidades de datos con patrones de consulta predecibles, Graphs: análisis y análisis de relaciones entre datos conectados|
-|Esquemas|Rígido|Flexible|
-|Escalamiento|Vertical|Horizontal|
-
-
-
 ## Prinicipales Implementaciones
  * [Redis](https://redis.io) (key-value)
  * [MongoDB](https://www.mongodb.com) (document)
@@ -48,14 +35,14 @@ Existen cuatro tipos de NoSQL:
 
 ## Bibliografia
 
-* https://en.wikipedia.org/wiki/NoSQL
-* https://en.wikipedia.org/wiki/Strozzi_NoSQL
-* https://en.wikipedia.org/wiki/Key–value_database
-* https://en.wikipedia.org/wiki/Document-oriented_database
-* https://en.wikipedia.org/wiki/Wide-column_store
-* http://www.leavcom.com/pdf/NoSQL.pdf
-* https://db-engines.com/en/ranking
-* https://www.mongodb.com/nosql-explained
-* https://www.mongodb.com/scale/types-of-nosql-databases
-* https://www.mongodb.com/nosql-explained/nosql-vs-sql
-* https://www.mongodb.com/compare/mongodb-postgresql
+* [https://en.wikipedia.org/wiki/NoSQL](https://en.wikipedia.org/wiki/NoSQL)
+* [https://en.wikipedia.org/wiki/Strozzi_NoSQL](https://en.wikipedia.org/wiki/Strozzi_NoSQL)
+* [https://en.wikipedia.org/wiki/Key–value_database](https://en.wikipedia.org/wiki/Key–value_database)
+* [https://en.wikipedia.org/wiki/Document-oriented_database](https://en.wikipedia.org/wiki/Document-oriented_database)
+* [https://en.wikipedia.org/wiki/Wide-column_store](https://en.wikipedia.org/wiki/Wide-column_store)
+* [http://www.leavcom.com/pdf/NoSQL.pdf](http://www.leavcom.com/pdf/NoSQL.pdf)
+* [https://db-engines.com/en/ranking](https://db-engines.com/en/ranking)
+* [https://www.mongodb.com/nosql-explained](https://www.mongodb.com/nosql-explained)
+* [https://www.mongodb.com/scale/types-of-nosql-databases](https://www.mongodb.com/scale/types-of-nosql-databases)
+* [https://www.mongodb.com/nosql-explained/nosql-vs-sql](https://www.mongodb.com/nosql-explained/nosql-vs-sql)
+* [https://www.mongodb.com/compare/mongodb-postgresql](https://www.mongodb.com/compare/mongodb-postgresql)
