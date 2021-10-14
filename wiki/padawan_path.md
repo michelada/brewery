@@ -128,8 +128,8 @@
 
 ## Ruby Path
 
-[detalles]({{ site.github.repository_url }}/ruby_path)
+[detalles]({{ site.baseurl }}/ruby_path)
 
 ## Ruby On Rails Path
 
-[detalles]({{ site.github.repository_url }}/rails_path)
+[detalles]({{ site.baseurl }}/rails_path)
