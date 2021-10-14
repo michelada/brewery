@@ -5,11 +5,11 @@ title: "Brewery"
 # with your folder name, otherwise leave it empty
 baseurl: "/brewery"
 # (string) Description of your wiki
-description: "brewery.michelada.io"
+description: "Base de conocimiento de michelada.io"
 # (boolean) Enable/disable wiki page list in sidebar
 show_wiki_pages: true
 # (integer) Maximum number of wiki page to shown in sidebar
-show_wiki_pages_limit: 10
+show_wiki_pages_limit: 20
 # (boolean) Enable/disable blog feature
 blog_feature: false
 # (boolean) Enable/disable wiki posts list in sidebar (needs blog_feature enabled)
@@ -45,7 +45,7 @@ use_prose_io: false
 search_engine : "js"
 # Setting google custom search engine for google
 # cse search bar (https://cse.google.it/cse/)
-google_cse_token:
+google_cse_token: 4512b8adc04a56ff6
 
 # (string) path of site root. Normally it's must be empty because _config.yml resides in the root of your repository.
 # If you have _config.yml and your site in a subfolder, then change this config accordly
