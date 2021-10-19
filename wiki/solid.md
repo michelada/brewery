@@ -33,9 +33,9 @@ class PlaceOrder
   end
 
   def call
-    StockAvailability(product: @product).call
-    ProductPayment(product: @product).call
-    ProductShipment(product: @product).call
+    StockAvailability.new(@product).call
+    ProductPayment.new(@product).call
+    ProductShipment.new(@product).call
   end
 end
 ```
@@ -54,7 +54,7 @@ class Logger
     @logging_from = logging_from
   end
 
-  def log(message: String)
+  def log(message)
     case @logging_from
     when :console
       print(message)
@@ -94,7 +94,7 @@ Nota: En los lenguajes de tipado estático es comun encontrar con interfaces o p
 
 ## Liskov Subtitution Principle
 
-Se define como una extensión del 'Open Closed Principle' que establece que las nuevas clases derivadas que extienden la clase base no deberían cambiar el comportamiento de la clase base (comportamiento de los métodos heredados). Siempre que una clase Y sea una subclase de la clase X, cualquier instancia que haga referencia a la clase X también debería poder hacer referencia a la clase Y (los tipos derivados deben ser compattr_accessoramente sustituibles por sus tipos base).
+Se define como una extensión del 'Open Closed Principle' que establece que las nuevas clases derivadas que extienden la clase base no deberían cambiar el comportamiento de la clase base (comportamiento de los métodos heredados). Siempre que una clase Y sea una subclase de la clase X, cualquier instancia que haga referencia a la clase X también debería poder hacer referencia a la clase Y (los tipos derivados deben ser sustituibles por sus tipos base).
 
 ### Ejemplo
 
@@ -124,7 +124,7 @@ class Square: Rectangle
     @height = value
   end
 
-  def setHeight(value)
+  def height=(value)
     super
     @width = value
   end
@@ -158,7 +158,7 @@ end
 # ISP violation: La instancia Mechanic
 # no hace uso de #start_engine
 class Mechanic
-  def repair(car: Car)
+  def repair(car)
     car.open
     car.change_engine
   end
@@ -230,7 +230,7 @@ end
 
 ```ruby
 class EventTracker
-  def initialize(logger: ConsoleLogger)
+  def initialize(logger: ConsoleLogger.new)
     @logger = logger
   end
 
