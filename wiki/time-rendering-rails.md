@@ -77,4 +77,4 @@ Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 32
 Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 1.2ms | Allocations: 33186)
 ```
 
-Lo que podemos destacar de la implementación de javascript, más allá de que el tiempo de respuesta es menor. Es que **las asignaciones totales decrecen en un 50%** ya que en una version solo usamos un formato estándar *iso8601*. Mientras que la implementación de ruby utiliza más código y por ende realiza más ubicaciones en memoria.
+Lo que podemos destacar de la implementación de javascript, más allá de que el tiempo de respuesta es menor. Es que **las asignaciones totales decrecen en un 50%** ya que solo usamos un formato estándar `iso8601`. Mientras que la implementación de `distance_of_time_in_words` utiliza más código y por ende realiza más ubicaciones en memoria.
