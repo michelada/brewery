@@ -18,11 +18,11 @@ o bien desde las vistas simplemente podemos llamar
   <p><%= l Time.now, format: :short %></p>
 ```
 
-Este método de [localización](https://guides.rubyonrails.org/i18n.html#adding-date-time-formats) localiza nuestros formatos de tiempo utilizando configuraciones ubicadas en `config/locales/en.yml`. Habilitando la capacidad de internacionalización (traducciones) en objetos Date, Time y DateTime.
+Este método de [localización](https://guides.rubyonrails.org/i18n.html#adding-date-time-formats) utiliza los archivos de configuraciones de i18n ubicadas en `config/locales/*.yml`. Habilitando la capacidad de internacionalización (traducciones) en objetos Date, Time y DateTime.
 
 ## Distancia de tiempo en palabras
 
-Por otro lado el popular método `distance_of_time_in_words` hace que nuestros objetos de tiempo se renderizen a formatos humanamente legibles (ej. "hace 5 meses", "hace 3 minutos", "dentro 3 horas").
+Por otro lado el popular método `distance_of_time_in_words` hace que nuestros objetos de tiempo se dibujen a formatos humanamente legibles (ej. "hace 5 meses", "hace 3 minutos", "dentro 3 horas").
 
 ```ruby
   from_time = Time.now
@@ -30,9 +30,9 @@ Por otro lado el popular método `distance_of_time_in_words` hace que nuestros o
   # => about 1 hour
 ```
 
-Esto presenta un problema, dado que la zona horaria de nuestro servidor no siempre es igual a la de los clientes, por lo que entonces se tiene que hacer el ajuste, por request. Un calculo innecesario que nuestro servidor puede omitir al delegar esta tarea al lado del cliente, por medio de JS
+Esto presenta un problema, dado que la zona horaria de nuestro servidor no siempre es igual a la de los clientes, por lo que entonces se tiene que hacer el ajuste, por request. Un calculo innecesario que nuestro servidor puede omitir al delegar esta tarea al lado del cliente, por medio de javascript.
 
-Utilizando una biblioteca de javascript para el manejo de tiempo tal como [date-fns](https://date-fns.org) y con la ayuda de un controller de [stimulus](https://stimulus.hotwired.dev) tendriamos un resultado similar con algo como esto:
+Utilizando una biblioteca de javascript para el manejo de tiempo tal como [date-fns](https://date-fns.org) y con la ayuda de un controller de [stimulus](https://stimulus.hotwired.dev) tendríamos un resultado similar con algo como esto:
 
 **js**
 ```js
@@ -61,7 +61,7 @@ export default class extends Controller {
 
 Al hacer esto evitamos que el servidor realize varias ciclos de procesamiento por cada vez que se encuentra con un objeto de tiempo.
 
-Si hacemos una pequeña prueva en donde se renderizen 250 fechas de tiempo como podemos ver en el [ejemplo](https://github.com/3zcurdia/teacher/blob/render-time/app/views/application/index.html.erb) tenemos una respuesta promedio.
+Si hacemos una pequeña prueba en donde se renderizen 250 fechas de tiempo como podemos ver en el [ejemplo](https://github.com/3zcurdia/teacher/blob/render-time/app/views/application/index.html.erb) tenemos una respuesta promedio.
 
 ```
 Rendered application/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 11974)
@@ -77,4 +77,4 @@ Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 32
 Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 1.2ms | Allocations: 33186)
 ```
 
-De lo que podemos destacar es de la implementación 100% de rails más allá de que el tiempo de respuesta es menor. Son **las asignaciones en memoria que duplican a la implementación de js** ya que en una solo usamos un formato estándar *iso8601* mientras que en la otra hacemos una serie de cálculos para la corrección de formato.
+De lo que podemos destacar es de la implementación 100% de rails más allá de que el tiempo de respuesta es menor. Es que **las asignaciones totales duplican a la implementación de js** ya que en una solo usamos un formato estándar *iso8601*. Mientras que en la implementación nativa utilizamos más código y por ende más ubicaciones en memoria solo para la humanización de formato.
