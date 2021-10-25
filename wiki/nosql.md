@@ -1,39 +1,75 @@
 # NoSQL
 
-Se entiende por NoSQL a aquellas bases de datos que no utilizan el modelo relacional como paradigma
-principal para el manejo de datos.
+Son aquellas bases de datos que **no utilizan el modelo relacional como paradigma principal** para el manejo de datos.
 
-El termino NoSQL fue acuñado a finales de la decada de los 2000's. Sin embargo desde los 60's se almacenan datos, y es hasta finales de los 70's cuando surge el concepto de SQL con el paper de Edgar Codd, "A Relational Model of Data for Large Shared Data Banks"
+El termino NoSQL fue acuñado a finales de la decada de los 2000's. Sin embargo desde los 60's se almacenan datos, y es hasta finales de los 70's cuando surge el concepto de SQL con el paper de Edgar Codd, "A Relational Model of Data for Large Shared Data Banks". Existen cuatro tipos de NoSQL: *Key-Value*, *Document*, *Wide Column* y *Graph*,
 
-# Tipos de bases de datos NoSQL
+## Key-Value
 
-Existen cuatro tipos de NoSQL:
-* **Key-Value**: Cada elemento de datos en la base de datos se almacena como un par llave-valor. Algo muy similar a un *hashmap*, pero persistente.
-* **Document**: Mantiene una estructura de datos similar a un formato tipo *JSON* en donde permite anidar documentos.
-* **Wide Column**: Los elementos de datos se estructuran en columnas, en donde el tipo de dato puede variar. Algunos lo interpretan como un *Key-Value bidimensional*.
-* **Graph**: La teoría de *grafos* aplicada al almacenamiento de datos. Estructura la información por medio de nodos(nodes) y bordes(edges)
+Cada elemento de datos en la base de datos se almacena como un par llave-valor. Algo muy similar a un *hashmap*, pero persistente.
 
-## Casos de uso
+### Casos de uso
 
-* **Key-Value**: cache, busquedas simples, datos transaccionales y de acceso rápido
-* **Document**: propósito general y estructuras de datos dinámicas
-* **Wide Column**: big data
-* **Graph**: análisis de datos y data science
+- Cache
+- Busquedas simples
+- Datos transaccionales
+- Datos de acceso rápido
+- QueueJobs
 
-## Prinicipales Implementaciones
- * [Redis](https://redis.io) (key-value)
- * [MongoDB](https://www.mongodb.com) (document)
- * [Firebase](https://firebase.google.com) (document)
- * [Cassandra](https://cassandra.apache.org/) (wide-column)
- * [BigTable](https://cloud.google.com/bigtable/) (wide-column)
- * [Neo4j](https://neo4j.com) (graph)
+### Implementaciones
+
+- [Redis](https://redis.io)
+- [DynamoDB](https://aws.amazon.com/dynamodb/)
 
 ## Alternativas
-* [JSON(PostgresSQL)](https://www.postgresql.org/docs/current/datatype-json.html): Una alternativa a MongoDB es dentro PostgresSQL utilizando columnas de tipo JSON y JSONB. Las cuales habilitan la flexibilidad de datos que tienen las NoSQL basadas en documentos.
-* [ETS(Erlang)](https://beta.erlang.org/docs/19/man/ets.html): Alternativa a key-value dentro del ecosistema de Erlang/Elixir
-* [MNesia(Erlang)](http://erlang.org/doc/man/mnesia.html): Alternativa a key-value y SQL dentro del ecosistema de Erlang/Elixir
+- [ETS(Erlang)](https://beta.erlang.org/docs/19/man/ets.html): Dentro del ecosistema de Erlang/Elixir, la OTP provee de una alternativa a bases de datos key-base.
+- [RabitMQ](https://www.rabbitmq.com): Si la arquitectura a implementar es de pipelines o queues
 
-## Bibliografia
+## Document
+
+Mantiene una estructura de datos similar a un formato tipo *JSON* en donde permite anidar documentos.
+
+### Casos de uso
+
+- Propósito general
+- Estructuras de datos dinámicas
+
+### Implementaciones
+
+- [MongoDB](https://www.mongodb.com) 
+- [Firebase](https://firebase.google.com)
+
+## Alternativas
+- [JSON(PostgresSQL)](https://www.postgresql.org/docs/current/datatype-json.html): Dentro PostgresSQL se pueden utilizar columnas de tipo JSON y JSONB. Las cuales habilitan la misma flexibilidad.
+- [MNesia(Erlang)](http://erlang.org/doc/man/mnesia.html): Dentro del ecosistema de Erlang/Elixir, la OTP provee de una alternativa a bases de datos distribuidas.
+
+## Wide-Column
+
+Los elementos de datos se estructuran en columnas, en donde el tipo de dato puede variar. Algunos lo interpretan como un *Key-Value bidimensional*.
+
+### Casos de uso
+
+- Data science
+
+### Implementaciones
+
+- [Cassandra](https://cassandra.apache.org/)
+- [BigTable](https://cloud.google.com/bigtable/)
+
+## Graph
+
+La teoría de *grafos* aplicada al almacenamiento de datos. Estructura la información por medio de nodos(nodes) y bordes(edges)
+
+### Casos de uso
+
+- Análisis de datos
+- Ciencia de datos
+
+### Implementaciones
+
+- [Neo4j](https://neo4j.com)
+
+## Fuentes
 
 * [https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf)
 * [https://en.wikipedia.org/wiki/NoSQL](https://en.wikipedia.org/wiki/NoSQL)
