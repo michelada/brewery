@@ -1,6 +1,5 @@
-## Titulo
+## Khe?
 
-- Contexto
-- Conceptos basicos
-- Implementaciones
-- Consideraciones 
+Una breve descripcion del contenido del PR
+
+It closes <issue>
