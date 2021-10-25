@@ -21,7 +21,7 @@ Cada elemento de datos en la base de datos se almacena como un par llave-valor. 
 - [Redis](https://redis.io)
 - [DynamoDB](https://aws.amazon.com/dynamodb/)
 
-## Alternativas
+### Alternativas
 - [ETS(Erlang)](https://beta.erlang.org/docs/19/man/ets.html): Dentro del ecosistema de Erlang/Elixir, la OTP provee de una alternativa a bases de datos key-base.
 - [RabitMQ](https://www.rabbitmq.com): Si la arquitectura a implementar es de pipelines o queues
 
@@ -39,7 +39,7 @@ Mantiene una estructura de datos similar a un formato tipo *JSON* en donde permi
 - [MongoDB](https://www.mongodb.com) 
 - [Firebase](https://firebase.google.com)
 
-## Alternativas
+### Alternativas
 - [JSON(PostgresSQL)](https://www.postgresql.org/docs/current/datatype-json.html): Dentro PostgresSQL se pueden utilizar columnas de tipo JSON y JSONB. Las cuales habilitan la misma flexibilidad.
 - [MNesia(Erlang)](http://erlang.org/doc/man/mnesia.html): Dentro del ecosistema de Erlang/Elixir, la OTP provee de una alternativa a bases de datos distribuidas.
 
