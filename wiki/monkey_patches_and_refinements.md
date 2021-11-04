@@ -1,6 +1,6 @@
 # Extendiendo el core de Ruby
 
-Ruby es un lenguaje extremadamente dinamico al punto que nos permite extender clases del core(que estan escritas en C) con unas cuantas lineas de ruby.
+Ruby es un lenguaje extremadamente dinámico al punto que nos permite extender clases del core(que están escritas en C) con unas cuantas lineas de ruby.
 
 ## MonkeyPatch
 
@@ -14,8 +14,19 @@ class String do
   end
 end
 ```
+Lo cual extiende la clase y en todo el contexto de la ejecucion.
+
+```
+irb(main)> "anita lava la tina".palindrome?
+=> true
+```
+
+Esto *se considera una mala practica* ya que al modificar comportamiento de clases afecta el comportamiento
+de toda nuestra aplicación, y en el recolector de basura.
 
 ## Refinements
+
+Por ello desde ruby 2.0 se implementaron **Refinements** una manera mas controlada de extender clases de ruby pero de manera encapsulada dentro de una clase.
 
 ```ruby
 module Palindromizer
@@ -36,9 +47,13 @@ class Process
 
   def self.pal?(str) = str.palindrome?
 end
+```
 
-Process.pal?("anita lava la tina")
+Al hacer esto nuestras extensión solo afecta a nuestra clase y mantiene el comportamiento original de classes core.
+
+```
+irb(main) > Process.pal?("anita lava la tina")
 => true
-"anita lava la tina".palindrome?
-
+irb(main)> "anita lava la tina".palindrome?
+=> undefined method `palindrome?' for "anita lava la tina":String (NoMethodError)
 ```
