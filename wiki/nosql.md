@@ -6,6 +6,8 @@ El termino NoSQL fue acuñado a finales de la decada de los 2000's. Sin embargo 
 
 ## Key-Value
 
+![key-value](assets/db-key-value.png)
+
 Cada elemento de datos en la base de datos se almacena como un par llave-valor. Algo muy similar a un *hashmap*, pero persistente.
 
 ### Casos de uso
@@ -27,6 +29,8 @@ Cada elemento de datos en la base de datos se almacena como un par llave-valor. 
 
 ## Document
 
+![document-based](assets/db-document.png)
+
 Mantiene una estructura de datos similar a un formato tipo *JSON* en donde permite anidar documentos.
 
 ### Casos de uso
@@ -36,7 +40,7 @@ Mantiene una estructura de datos similar a un formato tipo *JSON* en donde permi
 
 ### Implementaciones
 
-- [MongoDB](https://www.mongodb.com) 
+- [MongoDB](https://www.mongodb.com)
 - [Firebase](https://firebase.google.com)
 
 ### Alternativas
@@ -44,6 +48,8 @@ Mantiene una estructura de datos similar a un formato tipo *JSON* en donde permi
 - [MNesia(Erlang)](http://erlang.org/doc/man/mnesia.html): Dentro del ecosistema de Erlang/Elixir, la OTP provee de una alternativa a bases de datos distribuidas.
 
 ## Wide-Column
+
+![wide-column](assets/db-wide-column.png)
 
 Los elementos de datos se estructuran en columnas, en donde el tipo de dato puede variar. Algunos lo interpretan como un *Key-Value bidimensional*.
 
@@ -57,6 +63,8 @@ Los elementos de datos se estructuran en columnas, en donde el tipo de dato pued
 - [BigTable](https://cloud.google.com/bigtable/)
 
 ## Graph
+
+![graph](assets/db-graph.png)
 
 La teoría de *grafos* aplicada al almacenamiento de datos. Estructura la información por medio de nodos(nodes) y bordes(edges)
 
