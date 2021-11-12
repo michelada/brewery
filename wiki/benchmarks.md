@@ -1,10 +1,10 @@
 # Benchmarks
 
-Si deseamos saber si una funcion o implementacion es mas rapido que otra, normalmen hacemos una prueba de referencia (Benchmark)
+Si deseamos saber si una función o implementación es mas rápida que otra, normalmente hacemos una prueba de referencia (Benchmark)
 
 ## Biblioteca estándar
 
-Por default ruby provee del module de `benchmark` el cual nos permite hacer pruebas de referencia de una manera facil
+Por default ruby provee del modulo de `benchmark` el cual nos permite hacer pruebas de referencia de una manera fácil y sencilla.
 
 ```ruby
 require 'benchmark'
@@ -26,7 +26,7 @@ Benchmark.bm(7) do |x|
 end
 ```
 
-Al hacer esto, no existe una forma clara para determinar cuantas iteraciones por segundo son posibles, y a menudo solo ponemos un valor arbitrario
+Sin embargo, no existe una forma clara para determinar cuantas iteraciones por segundo son posibles, y a menudo solo ponemos un valor arbitrario para el numero de iteraciones a probar.
 
 ## IPS
 
