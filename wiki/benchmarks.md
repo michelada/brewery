@@ -30,7 +30,7 @@ Sin embargo, no existe una forma clara para determinar cuantas iteraciones por s
 
 ## IPS
 
-Sin embargo la gema [benchmark-ips](https://rubygems.org/gems/benchmark-ips) resuelve este problema al correr la prueba durante un periodo de calentamiento, con el cual puede determinar cuantas operaciones por segundo son posibles
+La gema [benchmark-ips](https://rubygems.org/gems/benchmark-ips) resuelve este problema al correr la prueba durante un periodo de calentamiento, con el cual puede determinar cuantas operaciones por segundo son posibles
 
 ```ruby
 require 'benchmark/ips'
