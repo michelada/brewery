@@ -30,9 +30,30 @@ Por otro lado el popular método `distance_of_time_in_words` hace que nuestros o
   # => about 1 hour
 ```
 
-Esto presenta un problema, dado que la zona horaria de nuestro servidor no siempre es igual a la de los clientes, por lo que entonces se tiene que hacer el ajuste, por request. Un calculo innecesario que nuestro servidor puede omitir al delegar esta tarea al lado del cliente, por medio de javascript.
+Esto presenta un problema, dado que la zona horaria de nuestro servidor no siempre es igual a la de los clientes, por lo que entonces se tiene que hacer el ajuste, por request. Un calculo innecesario que nuestro servidor puede omitir al delegar esta tarea al lado del cliente, por medio de javascript. En los cuales tenemos varias opciones
 
-Utilizando una biblioteca de javascript para el manejo de tiempo tal como [date-fns](https://date-fns.org) y con la ayuda de un controller de [stimulus](https://stimulus.hotwired.dev) tendríamos un resultado similar con algo como esto:
+### local-time.js
+
+La primera y mas sencilla seria por medio del [local-time](https://www.npmjs.com/package/local-time) creado por besacamp. Solo require que lo inicialicemos en `application.js`
+
+**js**
+```js
+// app/javascript/application.js
+import LocalTime from "local-time"
+LocalTime.start()
+```
+
+Y con un time tag podemos hacer esto
+
+**html**
+```erb
+<!--  app/views/home/index.html.erb -->
+<%= time_tag article.published_at, "data-local": "time-ago" %>
+```
+
+### date-fsn + stimulus
+
+Otra opción seria utilizando uno de los paquetes mas completos de manejo de tiempo en js [date-fns](https://date-fns.org) y con la ayuda de un controller de [stimulus](https://stimulus.hotwired.dev) tendríamos un resultado similar con algo como esto:
 
 **js**
 ```js
