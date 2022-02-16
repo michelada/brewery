@@ -47,7 +47,7 @@ tags:
     * Set
   * Structs & OpenStructs
   * Files
-     * CSV
+     * [CSV]({{ site.baseurl }}/csv)
      * YAML
      * JSON
   * Logger
@@ -61,11 +61,7 @@ tags:
     * OpenSSL
   * Date, Time & DateTime
   * Templates ERB
-  * Concurrencia
-    * Procesos
-    * Threads
-    * Fibers
-    * Ractors
+  * [Concurrencia]({{ site.baseurl }}/concurrency)
 
 ## Desarrollo con Ruby
   * Bibliotecas y gemas
@@ -73,6 +69,7 @@ tags:
   * Documentacion
   * Pruebas
   * Guias de estilo
+  * [Benchmarks]({{ site.baseurl }}/benchmarks)
 
 ## Gemas Sugeridas
   * Warden
@@ -80,7 +77,7 @@ tags:
   * Sidekiq
   * Sinatra
   * Money
-  * Rubocop + Standard
+  * Rubocop
   * Rubycritic
   * Minitest
   * FactoryBot
@@ -90,7 +87,6 @@ tags:
   * Dali
   * jwt
   * jekyll
-
 
 
 ## Bibliografia

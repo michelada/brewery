@@ -15,17 +15,17 @@ Los conocimientos mínimos requeridos en desarrollo
   - Archivos
   - Bases de datos
     - SQL
-    - NoSQL
+    - [NoSQL]({{ site.baseurl }}/no-sql)
 - Lenguaje de programación (Ruby, JS, Python, Elixir, etc)
 - Webframework
 
 ## Teoria
 Fundamentos teóricos sobre el desarrollo de software
-- Filosofia y buenas practicas
+- Buenas practicas
 - Diseño de software
-- SOLID
+- [SOLID]({{ site.baseurl }}/solid)
 - Patrones de diseño
-- TDD
+- [TDD]({{ site.baseurl }}/tdd)
 
 ## Componentes de aplicación
 Los conocimientos diversos utilizados a implementar aplicaciones

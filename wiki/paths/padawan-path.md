@@ -8,7 +8,7 @@ category: knowledge-path
 * Herramientas generales
   * Configuraciones de equipo
   * Sistemas de archivos
-  * Instalacion de herramientas
+  * Instalación de herramientas
   * Herramientas recomendadas
   * Seguridad
   * Dispositivos móviles
@@ -132,8 +132,8 @@ category: knowledge-path
 
 ## Ruby Path
 
-[detalles]({{ site.baseurl }}/ruby_path)
+[detalles]({{ site.baseurl }}/ruby-path)
 
 ## Ruby On Rails Path
 
-[detalles]({{ site.baseurl }}/rails_path)
+[detalles]({{ site.baseurl }}/rails-path)
