@@ -1,3 +1,8 @@
+---
+tags:
+  - knowledge path
+  - padawan
+---
 # The Padawan path
 
 ## Herramientas de desarrollo

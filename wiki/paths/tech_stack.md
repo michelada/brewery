@@ -1,3 +1,7 @@
+---
+tags:
+  - knowledge path
+---
 # Tech Stack
 
 - [Backend]({{ site.baseurl }}/backend_stack)

@@ -1,3 +1,9 @@
+---
+tags:
+  - knowledge path
+  - ruby
+  - rails
+---
 # Ruby On Rails path
 
 ## Introducción

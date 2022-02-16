@@ -1,3 +1,8 @@
+---
+tags:
+  - knowledge path
+  - ruby
+---
 # Ruby path
 
 ## Introducción

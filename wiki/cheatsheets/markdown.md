@@ -1,3 +1,8 @@
+---
+tags:
+  - markdown
+  - cheatsheet
+---
 # Markdown Cheatsheet
 
 ## Encabezados

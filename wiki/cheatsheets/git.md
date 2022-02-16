@@ -1,3 +1,8 @@
+---
+tags:
+  - git
+  - cheatsheet
+---
 # Git Cheatsheet
 
 ## Configuracion inicial
