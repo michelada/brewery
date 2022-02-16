@@ -1,7 +1,7 @@
 # Flujos de trabajo con git
 
 ![hero](https://wac-cdn.atlassian.com/dam/jcr:25d06843-2468-4e00-8ae7-11d4164f8995/hero.svg?cdnVersion=hp)
-La diversidad de metodologias a implementar en los flujos de trabajo pueden difícultar la implementacion GIT en un proyecto colaborativo.
+La diversidad de metodologias a implementar en los flujos de trabajo pueden dificultar la implementación GIT en un proyecto colaborativo.
 
 La finalidad de esta wiki es mostrar a grandes rasgos los diferentes flujos de trabajo que pueden ser implementados. Los cuales están diseñados para ser directivas mas que reglas concretas, de esta forma podras mezclar y combinar aspectos de flujos de trabajo diferentes para satisfacer tus necesidades individuales.
 
@@ -47,7 +47,7 @@ La principal diferencia con el flujo de trabajo **feature-branch**, es que se a�
 ## Forking
 ![forking](https://wac-cdn.atlassian.com/dam/jcr:5c0941ff-a8b5-435b-a092-2167705f1e97/01.svg?cdnVersion=hp)
 
-La principal ventaja del flujo de trabajo de **Forking** es que las contribuciones se pueden integrar sin la necesidad de que todo el mundo suba a un único repositorio central. Los desarrolladores suben a sus propios repositorios del lado del servidor, y sólo el responsable del proyecto puede pasar al repositorio oficial. Esto permite al mantenedor aceptar commits de cualquier desarrollador sin darles acceso de escritura al codigo base oficial.
+La principal ventaja del flujo de trabajo de **Forking** es que las contribuciones se pueden integrar sin la necesidad de que todo el mundo suba a un único repositorio central. Los desarrolladores suben a sus propios repositorios del lado del servidor, y sólo el responsable del proyecto puede pasar al repositorio oficial. Esto permite al mantenedor aceptar commits de cualquier desarrollador sin darles acceso de escritura al código base oficial.
 
 El resultado es un flujo de trabajo distribuido que proporciona una forma flexible para que los grandes equipos orgánicos (incluidos los terceros no confiables) colaboren de forma segura. Esto también lo convierte en un flujo de trabajo **ideal para proyectos de código abierto**.
 
@@ -55,7 +55,7 @@ Al igual que en los otros flujos de trabajo de Git, el flujo de trabajo de Forki
 
 En su lugar, se realiza un **Fork** en el repositorio oficial para crear una copia del mismo en el servidor. Esta nueva copia sirve como su repositorio público personal; no se permite a otros desarrolladores subir hacia él, pero pueden extraer cambios de él. Después de haber realizado el Fork el desarrollador clona en ambiente local de git para obtener una copia de él.
 
-Cuando están listos para publicar un commit local, suben el commit a su propio repositorio público, no el oficial. A continuación, crean un pull-request a el repositorio principal, lo que permite al responsable del proyecto saber que una actualización está lista para ser integrada. El pull request también sirve como para mantener una conversacion conveniente si hay problemas con el código aportado.
+Cuando están listos para publicar un commit local, suben el commit a su propio repositorio público, no el oficial. A continuación, crean un pull-request a el repositorio principal, lo que permite al responsable del proyecto saber que una actualización está lista para ser integrada. El pull request también sirve como para mantener una conversación conveniente si hay problemas con el código aportado.
 
 Para integrar la característica en la base de código oficial, el mantenedor acepta el pull request del contribuyente en su repositorio, comprueba que no rompa el proyecto, hace merge a `master` de origen. La contribución es ahora parte del proyecto, y otros desarrolladores deben hacer `pull` del repositorio oficial para sincronizar sus repositorios locales.
 

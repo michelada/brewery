@@ -33,7 +33,7 @@ Los conocimientos diversos utilizados a implementar aplicaciones
 - Automatización (CI/CD)
 - Análisis de código y métricas
 - Banderas y Pruebas A/B
-- Background Jobs
+- [Background Jobs]({{ site.baseurl }}/background_jobs)
 - Bitácoras (logs)
 - Documentación
 - Cache

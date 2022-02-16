@@ -4,8 +4,8 @@
 
 El Modelo Vista Controlador es el mas comun de todos y ampliamente usado en backend frameworks como ruby on rails, django, swing, entre otros. Este patron separa la aplicacion en tres componentes principales:
 
-- **Modelo(Model)** es la capa de abstraccion que connecta con nuestra `data source` ya sea una base de datos o una API. Y en general esta capa contiene nuestra logica de negocio.
-- **Vista(View)** es la capa de abtracion que interactua con el usuario y contiene a los componentes visuales.
-- **Controlador(Controller)** esta capa tiene la funcion de conectar la interaccion de las vistas con los modelos, y viceversa.
+- **Modelo(Model)** es la capa de abstracción que conecta con nuestra `data source` ya sea una base de datos o una API. Y en general esta capa contiene nuestra lógica de negocio.
+- **Vista(View)** es la capa de abstracción que interactúa con el usuario y contiene a los componentes visuales.
+- **Controlador(Controller)** esta capa tiene la función de conectar la interacción de las vistas con los modelos, y viceversa.
 
-Dentro de MVC se busca que nuestro controladores tengan la menor cantidad de codigo(thin controller) y que la logica de este se encuentr en los modelos(fat models)
+Dentro de MVC se busca que nuestro controladores tengan la menor cantidad de código(thin controller) y que la lógica de este se encuentre en los modelos(fat models). Sin embargo recientemente se han adoptado otros patrones de diseño adicionales a MVC, para lograr un sistema mas modular.

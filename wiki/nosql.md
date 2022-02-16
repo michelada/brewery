@@ -2,7 +2,7 @@
 
 Son aquellas bases de datos que **no utilizan el modelo relacional como paradigma principal** para el manejo de datos.
 
-El termino NoSQL fue acuñado a finales de la decada de los 2000's. Sin embargo desde los 60's se almacenan datos, y es hasta finales de los 70's cuando surge el concepto de SQL con el paper de Edgar Codd, "A Relational Model of Data for Large Shared Data Banks". Existen cuatro tipos de NoSQL: *Key-Value*, *Document*, *Wide Column* y *Graph*,
+El termino NoSQL fue acuñado a finales de la década de los 2000's. Sin embargo desde los 60's se almacenan datos, y es hasta finales de los 70's cuando surge el concepto de SQL con el paper de Edgar Codd, "A Relational Model of Data for Large Shared Data Banks". Existen cuatro tipos de NoSQL: *Key-Value*, *Document*, *Wide Column* y *Graph*,
 
 ## Key-Value
 

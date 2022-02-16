@@ -14,19 +14,17 @@ class String do
   end
 end
 ```
-Lo cual extiende la clase y en todo el contexto de la ejecucion.
+
+Lo cual extiende la clase en todo el contexto de la ejecución.
 
 ```
 irb(main)> "anita lava la tina".palindrome?
 => true
 ```
 
-Esto *se considera una mala practica* ya que al modificar comportamiento de clases afecta el comportamiento
-de toda nuestra aplicación, y en el recolector de basura.
-
 ## Refinements
 
-Por ello desde ruby 2.0 se implementaron **Refinements** una manera mas controlada de extender clases de ruby pero de manera encapsulada dentro de una clase.
+Por ello desde ruby 2.0 se implementaron **Refinements** una manera mas controlada de extender clases de ruby pero de manera encapsulada dentro de un componente.
 
 ```ruby
 module Palindromizer

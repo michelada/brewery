@@ -51,7 +51,7 @@ end
 
 ## Memoria
 
-Ahora si deseamos correr la prueba para determinar su uso de memoria, la gema [benchmark-memory](https://rubygems.org/gems/benchmark-memory)
+Ahora si deseamos correr la prueba para determinar su uso de memoria, la gema [benchmark-memory](https://rubygems.org/gems/benchmark-memory) nos resuelve este problema
 
 ```ruby
 require 'benchmark/memory'

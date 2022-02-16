@@ -49,7 +49,7 @@ Establece que los módulos de software deben estar abiertos para extensión, per
 #### Malo
 
 ```ruby
-class Logger
+class EventTracker
   def initialize(logging_from)
     @logging_from = logging_from
   end
@@ -116,7 +116,7 @@ class Rectangle
   end
 end
 
-class Square: Rectangle
+class Square < Rectangle
   # Violación LSP: clase heredada sobrescribe comportamiento del padre
 
   def width=(value)
@@ -182,7 +182,7 @@ end
 
 
 class Drive
-  def takeARide(vehicle)
+  def take_a_ride(vehicle)
     raise "Vehicle is not Driveable" unless vehicle.is_a?(Driveable)
 
     vehicle.start_engine
@@ -215,7 +215,7 @@ Se refiere a una forma específica de desacoplar los módulos de software. Al se
 class EventTracker
   def initialize
     # Una instancia de bajo nivel ConsoleLogger
-    # es directemente creade dentro de una de alto nivel.
+    # es directamente creada dentro de una de alto nivel.
     # La clase EventTracker aumenta el acoplamiento
     @logger = ConsoleLogger.new
   end

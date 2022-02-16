@@ -12,7 +12,7 @@
 ## Extreme Programming XP
 ![xp](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Extreme_Programming.svg/367px-Extreme_Programming.svg.png)
 
-Extreme Programming (XP) es una metodologia de desarrollo de software ágil que tiene como objetivo mejorar la calidad del software y la capacidad de respuesta a los requisitos cambiantes de los clientes. Como un tipo de desarrollo de software ágil, promueve frecuentes "lanzamientos"*(relases)* en ciclos cortos de desarrollo, cuyo objetivo es mejorar la productividad e introducir puntos de control en los que se puedan adoptar nuevos requisitos de los clientes.
+Extreme Programming (XP) es una metodología de desarrollo de software ágil que tiene como objetivo mejorar la calidad del software y la capacidad de respuesta a los requisitos cambiantes de los clientes. Como un tipo de desarrollo de software ágil, promueve frecuentes "lanzamientos"*(relases)* en ciclos cortos de desarrollo, cuyo objetivo es mejorar la productividad e introducir puntos de control en los que se puedan adoptar nuevos requisitos de los clientes.
 
 Algunas prácticas de XP son:
   * Pair programming
@@ -20,7 +20,7 @@ Algunas prácticas de XP son:
   * Test driven development
   * Whole team:
      - "Within XP, the **customer** is not the one who pays the bill, but the one who really uses the system.""
-  * Continuous integration
+  * Continuous Integration
   * Design improvement
   * Small releases
   * Shared understanding
@@ -46,6 +46,6 @@ Algo importante que resalta en scrum es que durante el sprint no se aceptan nuev
 
 ![kanban-board](assets/kanban.png)
 
-A diferencia de scrum donde existe una planeacion periodica, kanban se enfoca en el trabajo diario. Pareceria que al no existir una planeacion formal el desarrollo se conviernte un caos, sin embargo esto permite una mayor adaptacion al cambio. Mientras que en scrum los sprints estan definidos por periodos fijos, kaban permite extender el trabajo a mas de un sprint, considerando que la unidad minima de trabajo es 1 dia.
+A diferencia de scrum donde existe una planeacion periodica, kanban se enfoca en el trabajo diario. Parecería que al no existir una planeacion formal el desarrollo se convierte un caos, sin embargo esto permite una mayor adaptación al cambio. Mientras que en scrum los sprints estan definidos por periodos fijos, kaban permite extender el trabajo a mas de un sprint, considerando que la unidad minima de trabajo es 1 dia.
 
-> En Kanban solo se puede trabajar en una tarea a la vez.
+> En Kanban solo se puede trabajar en una sola tarea a la vez.

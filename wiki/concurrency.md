@@ -8,6 +8,8 @@ Antes que nada debemos entender que concurrencia y paralelismo no son lo mismo. 
 
 > *Paralelismo*: es una composición de ejecución simultanea de multiples cosas. En otras palabras concurrencia **hace con muchas cosas a la vez**.
 
+## GVL
+
 
 ## Process
 
@@ -32,3 +34,8 @@ Fiber.new { ... }
 ```ruby
 Ractor.new { ... }
 ```
+
+## Referencias
+
+- [Communicating Sequential Processes](https://www.cs.cmu.edu/~crary/819-f09/Hoare78.pdf)
+- [The Practical Effects of the GVL on Scaling in Ruby](https://www.speedshop.co/2020/05/11/the-ruby-gvl-and-scaling.html)
