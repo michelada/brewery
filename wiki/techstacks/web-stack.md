@@ -27,5 +27,5 @@ category: techstack
   - Archivos
   - Bases de datos
     - SQL
-    - [NoSQL]({{ site.baseurl }}/no-sql)
+    - [NoSQL]({{ site.baseurl }}/nosql)
 - HTML, CSS & JS
