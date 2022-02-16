@@ -1,7 +1,7 @@
 ---
+category: cheatsheet
 tags:
   - markdown
-  - cheatsheet
 ---
 # Markdown Cheatsheet
 

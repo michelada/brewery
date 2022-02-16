@@ -1,6 +1,5 @@
 ---
-tags:
-  - knowledge path
+category: techstack
 ---
 # Tech Stack
 

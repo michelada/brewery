@@ -1,7 +1,7 @@
 ---
+category: cheatsheet
 tags:
   - git
-  - cheatsheet
 ---
 # Git Cheatsheet
 
