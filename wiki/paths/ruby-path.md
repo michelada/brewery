@@ -33,7 +33,7 @@ tags:
   * Métodos
   * Módulos y clases
   * Excepciones
-  * Chango parches y Refinements
+  * [MonkeyPatch & Refinements]({{ site.baseurl }}/extend-ruby)
   * Misceláneos de sintáxis
   * Estructura de archivos
   * Globals
