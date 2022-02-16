@@ -4,20 +4,7 @@ category: techstack
 ---
 # Backend Stack
 
-## 101's
-Los conocimientos mínimos requeridos en desarrollo
-- Linea de comandos
-- Control de versiones
-- Protocolos HTTP
-  - Seguridad en web
-- Fuentes de datos
-  - Memoria
-  - Archivos
-  - Bases de datos
-    - SQL
-    - [NoSQL]({{ site.baseurl }}/no-sql)
-- Lenguaje de programación (Ruby, JS, Python, Elixir, etc)
-- Webframework
+## [101's]({{ site.baseurl }}/web-stack)
 
 ## Teoria
 Fundamentos teóricos sobre el desarrollo de software
