@@ -3,10 +3,10 @@
 @import "w3.scss";
 
 body {
-  /* background-color: #fff; */
+  background-color: #F5F8FA;
   padding: 50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #F5F8FA;
+  color: #828F96;
   font-weight: 400;
 }
 
@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #292C52;
+  color: #15162F;
   margin: 0 0 20px;
 }
 
@@ -40,29 +40,34 @@ h1 {
 }
 
 h2 {
-  color: #393939;
+  color: #15162F;
 }
 
 h3,
 h4,
 h5,
 h6 {
-  color: #494949;
+  color: #828F96;
 }
 
 a {
-  color: #43B7E9;
+  color: #292C52;
   text-decoration: none;
 }
 
 a:hover {
-  color: #3264FA;
+  color: #069;
 }
 
 a small {
   font-size: 11px;
+  color: #777;
   margin-top: -0.3em;
   display: block;
+}
+
+a:hover small {
+  color: #777;
 }
 
 .wrapper {
@@ -71,7 +76,7 @@ a small {
 }
 
 blockquote {
-  border-left: 1px solid #E6EDF0;
+  border-left: 1px solid #e5e5e5;
   margin: 0;
   padding: 0 0 0 20px;
   font-style: italic;
