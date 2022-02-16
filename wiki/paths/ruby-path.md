@@ -1,4 +1,5 @@
 ---
+title: Ruby
 category: knowledge-path
 tags:
   - ruby

@@ -1,7 +1,6 @@
 ---
+title: Padawan
 category: knowledge-path
-tags:
-  - padawan
 ---
 # The Padawan path
 

@@ -1,10 +1,11 @@
 ---
+title: RubyOnRails
 category: knowledge-path
 tags:
   - ruby
   - rails
 ---
-# Ruby On Rails path
+# RubyOnRails path
 
 ## Introducción
   * Filosofia

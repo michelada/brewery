@@ -1,7 +1,6 @@
 ---
+title: DevOps
 category: techstack
-tags:
-  - devops
 ---
 ## DevOps Stack
 - Redes y Seguridad

@@ -1,7 +1,6 @@
 ---
+title: Backend
 category: techstack
-tags:
-  - backend
 ---
 # Backend Stack
 
