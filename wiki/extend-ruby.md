@@ -1,4 +1,4 @@
-# Extendiendo el core de Ruby
+# Extendiendo Ruby
 
 Ruby es un lenguaje extremadamente dinámico al punto que nos permite extender clases del core(que están escritas en C) con unas cuantas lineas de ruby.
 
