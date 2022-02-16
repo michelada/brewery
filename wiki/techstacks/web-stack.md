@@ -16,7 +16,7 @@ category: techstack
 - Paradigmas de programación
   - Orientado a objetos
   - Funcional
-- [Agile]({{ site.baseurl }}/agile)
+- [Metodologías ágiles]({{ site.baseurl }}/agile)
 
 ## Practico
 - Interface de linea de comandos
