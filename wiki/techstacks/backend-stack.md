@@ -4,7 +4,9 @@ category: techstack
 ---
 # Backend Stack
 
-## [101's]({{ site.baseurl }}/web-stack)
+## 101's
+
+[Web development stack]({{ site.baseurl }}/web-stack)
 
 ## Teoria
 Fundamentos teóricos sobre el desarrollo de software
@@ -19,7 +21,7 @@ Los conocimientos diversos utilizados a implementar aplicaciones
 - Analytics
 - APIs
 - Assets
-- Autenticación
+- [Autenticación]({{ site.baseurl }}/authentication)
 - Autorización
 - Automatización (CI/CD)
 - Análisis de código y métricas
