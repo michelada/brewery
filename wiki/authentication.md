@@ -9,9 +9,9 @@ tags:
 
 > La validación de autenticidad de algo o alguien.
 
-En desarrollo web se definiria como el mecanismo que cuenta nuestra aplicación para identificar a un usuario dado. Poniendolo en terminos mas simples, la autenticación funciona como puerta que delimita la interacción con el mundo exterior, y a la vez define la identidad de nuestros usuarios.
+En desarrollo web se definiria como el mecanismo que cuenta nuestra aplicación para identificar a un usuario. Poniendolo en terminos mas simples, la autenticación funciona como puerta que delimita la interacción con el mundo exterior, y a la vez define la identidad de nuestros usuarios.
 
-Por ende **un mecanismo de autenticación solo tiene la responsabilidad de identificar al usuario**. Esto se puede hacer mediante varios mecanismos, en desarrollo web el método principal es a través del almacenamiento de datos dentro las cookies en la session del navegador y para el caso de APIs web se utilizan tokens de autenticación.
+Por ende **un mecanismo de autenticación solo tiene la responsabilidad de identificar al usuario**. Esto se puede hacer mediante varios mecanismos, en desarrollo web el método principal es a través de cookies y para el caso de APIs web se utilizan tokens de autenticación.
 
 ## Implementación
 
@@ -19,8 +19,8 @@ Una aplicación de rails tenemos varias formas de implementar este mecanismo
 
 - **HTTPAuthentication**: Cuando solo queremos restringir el acceso
 - **Controllers + SecurePassword**: Cuando solo queremos una implementación simple para identificar al usuario
-- **Warden + SecurePassword**: Similar a la anterior pero con acceso al usuario desde el middleware
-- **Devise**: Cuando queremos una implementación rápida y completa de autenticación
+- **Warden + SecurePassword**: Similar a la anterior pero con acceso al usuario desde el middleware y con multiples estrategias.
+- **Devise**: Cuando queremos una implementación completa y rápida de autenticación
 - **JWT**: Cuando tenemos una API
 
 ### Basic HTTP Authentication
@@ -31,13 +31,13 @@ De manera nativa Rails, provee de [autenticación básica de http](https://devel
   http_basic_authenticate_with name: "name", password: "secret", except: :index
 ```
 
-Sin embargo esta solución no provee de una identidad del usuario.
+Sin embargo esta solución no provee de una identidad del usuario, solo restringe el acceso.
 
 ### Controllers + ActiveModel::SecurePassword
 
-Existen diferentes maneras de autenticar usuarios, la mas común es por medio de email/password. Es a partir de Rails 3 que se integra `ActiveModel::SecurePassword` que utiliza [bcrypt-ruby](https://github.com/bcrypt-ruby/bcrypt-ruby) la cual un binding a el algoritmo de *password hashing* de OpenBSD.
+Existen diferentes maneras de autenticar usuarios, la mas común es por medio de email/password.
 
-Es necesario incluir la gema en nuestro proyecto
+A partir de Rails 3 que se integra `ActiveModel::SecurePassword` que utiliza [bcrypt-ruby](https://github.com/bcrypt-ruby/bcrypt-ruby) la cual un binding a el algoritmo de *password hashing* de OpenBSD.
 
 ```ruby
   # Gemfile
@@ -46,7 +46,7 @@ Es necesario incluir la gema en nuestro proyecto
 
 #### Modelo
 
-Luego en nuestro modelo de usuario agregaremos `has_secure_password` para implementar una estrategia de autenticación.
+Dentro del modelo a autenticar agregaremos `has_secure_password` para incluir los métodos de autenticación.
 
 ```ruby
   # app/models/user.rb
@@ -59,7 +59,7 @@ Por default este método utilizara la columna `password_digest` y `recovery_pass
 
 #### Controllers
 
-Respecto a los controllers rails no cuenta con un mecanismo a nivel de controllers para autenticar, pero esto puede ser implementado fácilmente.
+ApplicationController no cuenta con un mecanismo para autenticar, pero esto puede ser implementado fácilmente.
 Para ello requerimos lo siguiente en `application_controller.rb`
 
 ```ruby
@@ -112,17 +112,24 @@ class SessionsController < ApplicationController
 end
 ```
 
-Como podemos ver la session a nivel de controller se almacena en `session[:user_id]`. Y esta queda encapsulada dentro de los métodos de `application_controller.rb`. Por lo que si requerimos autenticar un controller solo usaremos el siguiente `before_action`
+Como podemos ver informacion de session se almacena a nivel de controlador en `session[:user_id]`. Y esta queda encapsulada dentro de los métodos de `application_controller.rb`. Por lo que si requerimos autenticar un controller solo usaremos el siguiente `before_action`
 
 ```
   before_action :auhtenticate!
 ```
 
-De esta manera aseguraremos que cada acción de nuestro controller identifique al usuario antes de ejecutarse.
+De esta manera aseguraremos que cada acción del controlador se identifique al usuario antes de ejecutarse.
 
 ### Middleware + ActiveModel::SecurePassword
 
-En el escenario en donde requerimos la identidad del usuario antes de que el [pipeline de rails]({{ site.baseurl }}/rails-pipeline) llegue a los controllers, usaremos una implementación usando el middleware, esta se logra utilizando [warden](https://github.com/wardencommunity/warden). Warden es una gema que nos solo nos permite crear estrategias a la medida para autenticar al usuario desde el rack middleware.
+En el escenario en donde requerimos la identidad del usuario antes de que el [pipeline de rails]({{ site.baseurl }}/rails-pipeline) llegue a los controllers, usaremos una implementación usando el middleware, esta se logra utilizando [warden](https://github.com/wardencommunity/warden). Warden es una gema que nos permite crear estrategias de autenticación a medida desde el rack middleware.
+
+```ruby
+# Gemfile
+gem "warden"
+```
+
+### Configuracion
 
 Continuando con el ejemplo anterior, solo moveríamos la lógica del controller a la estrategia de warden ubicado en un archivo de configuración.
 
@@ -161,8 +168,7 @@ end
 
 #### Controllers
 
-Con esta implementación los controllers se modifican para mover la responsabilidad
- de autenticación a warden.
+Con esta implementación los controladores se modifican para mover la responsabilidad de autenticación a warden.
 
 ```ruby
 # app/controllers/application_controller.rb
@@ -211,25 +217,25 @@ class SessionsController < ApplicationController
 end
 ```
 
-La ventaja de usar warden es que nos permite tener multiples estrategias de autenticación, eliminando así la necesidad de modificar nuestros controllers.
+La ventaja de usar warden es que nos permite tener multiples estrategias de autenticación, eliminando así la necesidad de modificar codigo existente.
 
 ### Implementación completa
 
-Todo lo anterior solo es una pequeña parte del flujo de autenticación, aun faltan flujos te recuperación de passwords, confirmación, invitaciones, tracking de sesiones, etc. Para ello la gema [devise](https://github.com/heartcombo/devise) nos ayuda a implementar todo esto sin la necesidad de escribir extensas lineas de código.
+Sin embargo todo lo anterior es solo es una pequeña parte del flujo de autenticación, aun faltan flujos te recuperación de passwords, confirmación, invitaciones, tracking de sesiones, etc. Para ello la gema [devise](https://github.com/heartcombo/devise) nos ayuda a implementar todo esto sin la necesidad de escribir extensas lineas de código.
 
 [Primeros pasos con devise](https://github.com/heartcombo/devise#getting-started)
 
-La gran ventaja que tiene devise es que al estar implementada sobre warden, es que se pueden añadir estrategias sin modificar codigo existente. Ademas que cuenta con una gran variedad de módulos soportados por la comunidad.
+La gran ventaja que tiene devise es que al estar implementada sobre warden, es que permite extender estrategias de autenticación. Ademas que cuenta con una gran variedad de módulos soportados por la comunidad, que habilitan funcionalidad adicional.
 
 ### APIS
 
-En el caso de las APIs ya sean SOAP, REST o GraphQL. La verificación de los usuarios deja a un lado el uso de cookies ya que las peticiones a estas suelen provenir de clientes fuera del domino de la aplicación.
+En el caso de las APIs ya sean SOAP, REST o GraphQL. La verificación de los usuarios no utiliza cookies ya que las peticiones a estas suelen provenir de clientes fuera del domino de la aplicación.
 
 #### Tokens
 
 > Arreglo de caracteres pseudo aleatorios asociados a una entidad
 
-Una de las formas mas simples de autenticar en una API es por medio de un token de usuario, el cual puede viajar por medio del header o el url de la petición http. Dando como resultado algo como lo siguiente
+Una de las formas mas simples de autenticar en una API es por medio de un token de usuario, el cual puede viajar en el header o la url de la petición http. Dando como resultado algo como lo siguiente
 
 ```
   curl https://api.example.com/posts?token=0082df2420494c5b8441c46bcdeec168
@@ -239,6 +245,6 @@ La desventaja de este método, es que pese a que el request viaje sobre https, l
 
 #### JSON Web Tokens
 
-Los JSON Web Tokens(JWT) son estándar abierto de la industria [RFC-7519](https://datatracker.ietf.org/doc/html/rfc7519) para la representación segura de entidades entre dos partes. JWT permite incluir información adicional en el payload del token, habilitando la capacidad de configurar un tiempo de expiración. Por lo que si un token JWT llegara a ser comprometido solo seria valido por un tiempo determinado.
+Los JSON Web Tokens(JWT) son estándar abierto de la industria [RFC-7519](https://datatracker.ietf.org/doc/html/rfc7519) para la representación segura de entidades entre dos partes. La ventaja de JWT es que permite incluir información adicional en el payload del token, habilitando la capacidad de configurar un tiempo de expiración. Por lo que si un token JWT llegara a ser comprometido solo sería valido por un tiempo determinado.
 
 [ver mas](https://jwt.io/)
