@@ -8,7 +8,7 @@ category: techstack
 - Logica booleana
 - Algoritmos
 - Estructuras de datos
-- Complejidad O(n)
+- Notacion Big-O
 - Modelo Entidad - Relación
 - Arquitectura Cliente - Servidor
 - Protocolo HTTP
