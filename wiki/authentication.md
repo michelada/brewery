@@ -11,7 +11,7 @@ tags:
 
 En desarrollo web se definiria como el mecanismo que cuenta nuestra aplicación para identificar a un usuario. Poniendolo en terminos mas simples, la autenticación funciona como puerta que delimita la interacción con el mundo exterior, y a la vez define la identidad de nuestros usuarios.
 
-Por ende **un mecanismo de autenticación solo tiene la responsabilidad de identificar al usuario**. Esto se puede hacer mediante varios mecanismos, en desarrollo web el método principal es a través de cookies y para el caso de APIs web se utilizan tokens de autenticación.
+**Un mecanismo de autenticación solo tiene la responsabilidad de identificar al usuario**. Esto se puede hacer mediante varios métodos, en desarrollo web el principal es a través de cookies y en el caso de APIs web se utilizan tokens de usuario.
 
 ## Implementación
 
@@ -86,7 +86,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-Y un nuevo controller `sessions_controller.rb` cuya responsabilidad es manejar las sesiones de usuario.
+Y un nuevo controlador `sessions_controller.rb` cuya responsabilidad es manejar las sesiones de usuario.
 
 ```ruby
 # app/controllers/sessions_controller.rb
@@ -112,7 +112,7 @@ class SessionsController < ApplicationController
 end
 ```
 
-Como podemos ver informacion de session se almacena a nivel de controlador en `session[:user_id]`. Y esta queda encapsulada dentro de los métodos de `application_controller.rb`. Por lo que si requerimos autenticar un controller solo usaremos el siguiente `before_action`
+Como podemos ver informacion de session se almacena a nivel de controlador en `session[:user_id]`. Y esta queda encapsulada dentro de los métodos de `application_controller.rb`. Por lo que si requerimos autenticar un controlador solo usaremos el siguiente `before_action`
 
 ```
   before_action :auhtenticate!
@@ -131,7 +131,7 @@ gem "warden"
 
 ### Configuracion
 
-Continuando con el ejemplo anterior, solo moveríamos la lógica del controller a la estrategia de warden ubicado en un archivo de configuración.
+Continuando con el ejemplo anterior, solo moveríamos la lógica del controlador a la estrategia de warden ubicado en un archivo de configuración.
 
 ```ruby
 # config/initializers/warden.rb
