@@ -30,43 +30,20 @@ tags:
 ## Rails a detalle
   * Organización interna
   * ActiveRecord
-  * ActionDispatch y ActionController
+    * Queries
+    * Mirgaciones
+  * ActiveModel
+    * Callbacks  
+    * Validaciones  
+  * ActionController
   * ActionView
+  * ActiveSupport
+  * ActionMailer
+  * ActionMailbox
+  * ActionText
   * ActiveJob
-  * Migraciones
-  * Extenciones de Rails
-
-## Implementaciones con Rails
-  * Analytics
-  * APIs
-  * Assets
-  * Autenticación
-  * Autorización
-  * Automatización (CI/CD)
-  * Análisis de código y métricas
-  * Banderas y Pruebas A/B
-  * Background Jobs
-  * Bitácoras (logs)
-  * Documentación
-  * Cache
-  * CDN
-  * Concurrencia y parallelismo
-  * Consultas de texto completo
-  * Computo de alta precisión (BigDecimal & Money)
-  * Encriptación y Cifrado
-  * Internacionalización
-  * Guías de estilo
-  * Geolocalización
-  * Generación de sitios estáticos
-  * Manejo de errores
-  * Manejo de archivos
-  * Manejo de archivos PDF
-  * Notificaciones
-  * Parseo y Serialización
-  * Paginación
-  * Performance
-  * Procesamiento de imágenes
-  * Pruebas unitarias y de sistema
-  * SEO
-  * Seguridad
-  * Websockets
+  * ActiveStorage
+  * ActionCable
+  * I18n
+  * Asset Pipeline
+  * RailsEngines
